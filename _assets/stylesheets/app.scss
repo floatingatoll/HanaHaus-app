@@ -7,4 +7,61 @@
 @import "bootstrap";
 
 // import our own partials
-// @import "exmaple"
+// @import "example"
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.work {
+	color: $work;
+}
+
+.learn {
+	color: $learn;
+}
+
+.play {
+	color: $play;
+}
+
+.intro {
+	display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: $light;
+    background-color: $dark;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+    .intro-body {
+        display: table-cell;
+        vertical-align: middle;
+        .brand-heading {
+            font-size: 40px;
+            color: $primary;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            color: $primary;
+        }
+    }
+}
+
+.overview {
+    color: $dark;
+    background-color: $primary;
+
+    .box {
+        text-align: center;
+        h1 {
+            text-transform: uppercase;	
+        }
+    }
+}
