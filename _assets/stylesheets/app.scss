@@ -40,31 +40,33 @@ h6 {
 .play {
 	color: $play;
 }
-
-.intro {
-	display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: $light;
+.introrow {
     background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-
-    .intro-body {
-        display: table-cell;
-        vertical-align: middle;
-        .brand-heading {
-            font-size: 40px;
-            color: $primary;
-        }
-
-        .intro-text {
-            font-size: 18px;
-            color: $primary;
+        
+    .intro {
+        display: table;
+        width: 100%;
+        height: 100%;
+        padding: 100px 0;
+    	text-align: center;
+        color: $light;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    
+        .intro-body {
+            display: table-cell;
+            vertical-align: middle;
+            .brand-heading {
+                font-size: 40px;
+                color: $primary;
+            }
+    
+            .intro-text {
+                font-size: 18px;
+                color: $primary;
+            }
         }
     }
 }
