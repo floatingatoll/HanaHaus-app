@@ -225,6 +225,8 @@ h6 {
 
 .learnpage {
     .event {
+        padding-top: 10px;
+        padding-bottom: 50px;
         border-top: 1px solid $dark;
 
         .eventlisting {
@@ -257,7 +259,6 @@ h6 {
                 color: white;
                 padding: 10px 80px;
             }
-
         }
     }
 }
