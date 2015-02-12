@@ -130,6 +130,12 @@ h6 {
         font-size: 25px;
     }
 
+    // === Classes to extend
+    .footertext {
+        font-size: 20px;
+        padding: 50px 20px;
+    }
+
     .findus {
         background-color: $primary;
         .adress {
@@ -142,12 +148,22 @@ h6 {
     }
 
     .about {
+        @extend .footertext;
         /* background: url(<%= asset_path "club-bg.jpg" %>) no-repeat bottom center scroll; */
         background: url(http://fakeimg.pl/1600x1400/) no-repeat bottom center scroll;
-        font-size: 20px;
-
         .abouttext {
-            padding: 50px 20px;
+            @extend .footertext;
+        }
+    }
+
+    .partners {
+        .infotext {
+            @extend .footertext;
+            background-color: $primary-dark;
+        }
+
+        .contactform {
+            background-color: $primary;   
         }
     }
 
