@@ -114,12 +114,12 @@ h6 {
 
 
 #info {
-    height: 100vh;
     position: relative;
 
     .navlink {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 20px;
         text-align: center;
         font-size: 35px;
 
@@ -133,7 +133,6 @@ h6 {
     }
 
     .main {
-        position:absolute;
         background-color: $primary;
         .adress {
             font-size: 25px;
@@ -145,9 +144,6 @@ h6 {
     }
 
     .footer {
-        position:absolute;
-        width: 100%;
-        bottom: 0;
         .footerlink {
             margin-top: 25px;
             margin-bottom: 25px;
