@@ -1,0 +1,25 @@
+<div class="row event">
+    <div class="container">
+        <div class="col-md-12 eventlisting">
+            <h1>{{include.title}}</h1>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="http://fakeimg.pl/100x100/" height="100px">
+                    <p class="caption">{{include.author}}</p>
+                </div>
+                <div class="col-md-10">
+                    <div class="row description">
+                        {{include.description}}
+                    </div>
+                    <div class="row">
+                        <span class="dateinfo">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="time">{{include.time}}</span> | <span class="date">{{include.date}}</span> <span class="day">{{include.day}}</span>
+                        </span>
+                        <button class="pull-right">Reserve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
