@@ -30,7 +30,6 @@ h5,
 h6 {
     margin: 0 0 35px;
     padding: 50px 0 0;
-    text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -217,9 +216,48 @@ h6 {
     }
 
     h1 {
+        text-transform: uppercase;
         padding-top: 0;
         font-size: 60px;
-        font-weight:100;
+        font-weight: 100;
     }
 }
 
+.learnpage {
+    .event {
+        border-top: 1px solid $dark;
+
+        .eventlisting {
+            .red {
+                color: $learn;
+            }
+            .caption {
+                font-size: 24px;
+            }
+            h1 {
+                font-size: 30px;
+                font-weight: 100;
+            }
+            .description {
+                font-size: 18px;
+            }
+            .dateinfo {
+                font-size: 30px;
+            }
+            .time, .date {
+                @extend .red;
+            }
+            .day {
+                font-size: 18px;
+            }
+            button {
+                font-size: 30px;
+                border: none;
+                background-color: $learn;
+                color: white;
+                padding: 10px 80px;
+            }
+
+        }
+    }
+}
