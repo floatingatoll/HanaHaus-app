@@ -210,6 +210,8 @@ h6 {
 }
 
 .header {
+    padding-bottom: 25px;
+
     .headerelement {
         padding-top: 25px;
         text-align: center;
@@ -223,10 +225,14 @@ h6 {
     }
 }
 
+.buttonstyle {
+    font-size: 30px;
+    border: none;
+    padding: 10px 80px;
+}
+
 .learnpage {
     .event {
-        padding-top: 10px;
-        padding-bottom: 50px;
         border-top: 1px solid $dark;
 
         .eventlisting {
@@ -256,11 +262,9 @@ h6 {
                     font-size: 18px;
                 }
                 button {
-                    font-size: 30px;
-                    border: none;
+                    @extend .buttonstyle;
                     background-color: $learn;
                     color: white;
-                    padding: 10px 80px;
                 }
             }
         }
@@ -268,5 +272,31 @@ h6 {
 }
 
 .workpage {
+    .table {
+        .tablelisting {
+            // FIXME: This repeast a lot of style of the learnpage
+            text-align: center;
 
+            h1 {
+                font-size: 30px;
+                font-weight: 100;
+            }
+
+            p {
+                display: none;
+                font-size: 20px;
+                font-weight: 100;
+            }
+
+            &:hover p {
+                display: block;
+            }
+
+            button {
+                @extend .buttonstyle;
+                background-color: $work;
+                color: white;
+            }
+        }
+    }
 }
