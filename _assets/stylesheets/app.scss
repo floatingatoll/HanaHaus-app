@@ -243,21 +243,25 @@ h6 {
             .description {
                 font-size: 18px;
             }
-            .dateinfo {
-                font-size: 30px;
-            }
-            .time, .date {
-                @extend .red;
-            }
-            .day {
-                font-size: 18px;
-            }
-            button {
-                font-size: 30px;
-                border: none;
-                background-color: $learn;
-                color: white;
-                padding: 10px 80px;
+            .book {
+                margin-top: 15px;
+
+                .dateinfo {
+                    font-size: 30px;
+                }
+                .time, .date {
+                    @extend .red;
+                }
+                .day {
+                    font-size: 18px;
+                }
+                button {
+                    font-size: 30px;
+                    border: none;
+                    background-color: $learn;
+                    color: white;
+                    padding: 10px 80px;
+                }
             }
         }
     }
