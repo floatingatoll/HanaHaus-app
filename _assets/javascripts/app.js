@@ -1,4 +1,6 @@
-var $ = jquery;
+//= require vendor/jquery.min
+//= require vendor/bootstrap.min
+
 $(document).ready(function() {
   $('#about-footer').click(function() {
     console.log('about');

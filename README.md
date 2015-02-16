@@ -15,7 +15,7 @@ bundle install
 ## Local development
 
 ```
-rake serve
+grunt serve
 ```
 
 ## Publish (to gh-pages)
