@@ -3,10 +3,8 @@ layout: default
 ---
 
 <div class="workpage">
-
     {% include category/header.html title="Learn" imagetype="learn" %}
-
-    {% for event in site.events %}
+    {% for event in site.data.events %}
     {% include events/event.html   title=event.title author=event.author description=event.description time=event.time date=event.date day=event.day %}
     {% endfor %} 
 </div>
