@@ -12,3 +12,27 @@ github_username:  HanaHaus
 
 # Build settings
 markdown: kramdown
+
+# for learn.html
+events:
+- title: "The River"
+  author: "Die Megan"
+  description: "River is a 21.9-mile (35.2 km) tributary of the Sandy River in the U.S. state of Oregon. Beginning at the lower end of Bull Run Lake in the Cascade Range, it flows generally west through the Bull Run Watershed Management Unit, an area restricting potential sources of contamination. Native Americans living along the Columbia River as early as 10,000 years ago likely visited the watershed in search of food, and more recently created trails near the upper part of it over the Cascade Range and around Mount Hood. By the mid-19th century, pioneers used these trails to cross the mountains to reach the fertile Willamette Valley. The river, impounded by two artificial storage reservoirs as well as the lake, has been the primary source of drinking water for the city of Portland, Oregon, since 1895. Despite legal protections, about 22 percent of the protected zone was logged during the second half of the 20th century, and erosion increased, forcing Portland to shut down the water supply from the river one time in 1996. A law passed later that year prohibited most logging in or near the watershed. Trees more than 500 years old cover about half of the watershed, and more than 250 wildlife species, including the protected northern spotted owl, inhabit this forest. (Full article...)"
+  time: "1:00PM"
+  date: "02 April"
+  day: "Saturday"
+
+- title: "The sotry of the cool people"
+  author: "die Andrea"
+  description: "Since the end of the 15th century, the migration of Europeans to the Americas has led to centuries of conflict and adjustment between Old and New World societies. Many Native Americans have historically lived as hunter-gatherer societies and preserved their histories by oral traditions and artwork. This resulted in the first written sources on the conflict being authored by Europeans.[2]"
+  time: "8:00PM"
+  date: "05 March"
+  day: "Thursday"
+
+- title: "Some facts aobut my home country"
+  author: "Der Peter"
+  description: "Germany (Listeni/ˈdʒɜrməni/; German: Deutschland), officially the Federal Republic of Germany (German: Bundesrepublik Deutschland, pronounced [ˈbʊndəsʁepuˌbliːk ˈdɔʏtʃlant] ( listen)),[7] is a federal parliamentary republic in western-central Europe. It consists of 16 constituent states, which retain limited sovereignty, and covers an area of 357,021 square kilometres (137,847 sq mi) with a largely temperate seasonal climate. Its capital and largest city is Berlin. Germany is a major economic and political power and traditionally a leader in many cultural, theoretical and technical fields."
+  time: "9:00AM"
+  date: "01 February"
+  day: "Monday"
+
