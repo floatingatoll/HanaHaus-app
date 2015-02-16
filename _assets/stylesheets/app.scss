@@ -52,8 +52,13 @@ h6 {
     height: 100vh;
     text-align: center;
     color: $light;
-    /* background: url(<%= asset_path "club-bg.jpg" %>) no-repeat bottom center scroll; */
-    background-color: $dark;
+    background-image: 
+        linear-gradient(
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+        ),
+        url("http://fakeimg.pl/1280x800/?text=Some Image");
+    background-image: no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -185,6 +190,7 @@ h6 {
     }
 
     .footer {
+        background-color: $footer;
         .footerlink {
             margin-top: 25px;
             margin-bottom: 25px;
