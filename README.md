@@ -12,6 +12,11 @@ handle local assets.
 bundle install
 ```
 
+## Front-End Installation
+    bower install
+    npm install
+
+
 ## Local development
 
 ```
