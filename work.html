@@ -4,7 +4,7 @@ layout: default
 
 <div class="workpage">
 
-    {% include category/header.html title="Work" imagetype="work" %}
+    {% include category/header.html title="Work" iconurl="https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/00_Common%20Assets/Square-01.png" %}
     {% for table in site.data.tables %}
     {% include tables/table.html  title=table.title description=table.description  %}
     {% endfor %}
