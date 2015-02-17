@@ -68,8 +68,12 @@ h6 {
         vertical-align: middle;
         color: $primary;
 
-        img {
+        .logo {
             margin-bottom: 100px;
+        }
+
+        .categoryicon {
+            margin-top: 25px;
         }
 
         .intro-text {
