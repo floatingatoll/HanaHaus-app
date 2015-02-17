@@ -12,10 +12,15 @@ handle local assets.
 bundle install
 ```
 
+## Front-End Installation
+    bower install
+    npm install
+
+
 ## Local development
 
 ```
-rake serve
+grunt serve
 ```
 
 ## Publish (to gh-pages)
