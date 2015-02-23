@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           src: 'bootstrap.min.js',
           dest: '_assets/javascripts/vendor/'
         }]
-      }
+      },
     },
 
     uglify: {

@@ -74,22 +74,25 @@ layout: default
   <div>
     <nav class="navbar" role="navigation">
       <div class="col-md-3">
-        <div class="navlink" id="about-footer">About Us</div>
+        <div class="navlink" id="about-footer-nav">About Us</div>
       </div>
       <div class="col-md-3">
-        <div class="navlink" id="partners-footer">Partners</div>
+        <div class="navlink" id="partners-footer-nav">Partners</div>
       </div>
       <div class="col-md-3">
-        <div class="navlink" id="social-footer">Social Media</div>
+        <div class="navlink" id="social-footer-nav">Social Media</div>
       </div>
       <div class="col-md-3">
-        <div class="navlink" id="find-footer">Find Us</div>
+        <div class="navlink" id="find-footer-nav">Find Us</div>
       </div>
     </nav>
   </div>
 
   <!-- Dynamic footer content -->
+  {% include about.html %}
+  {% include partners.html %}
   {% include socialmedia.html %}
+  {% include findus.html %}
 
 
   <div class="footer">
