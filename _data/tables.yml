@@ -1,11 +1,15 @@
 - title: "Individual Table"
   description: "This is the description of a super awesome and very lonesome individual table."
+  image: "https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/02_Work_Page/Work_01_Individual_Table_BG-01.png"
 
 - title: "Communal Table"
   description: "Cozy and private individual works tation with broadband internet connection and comfortable seats."
+  image: "https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/02_Work_Page/Work_02_Communal_Table_BG-01.png"
 
 - title: "Couch with table arms"
   description: "This is my personal favourite, it's a couch wit thable arms, which basically means you can sit there and  put your arms on the couch. This however also means you don't have to touch your own computer."
+  image: "https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/02_Work_Page/Work_03_Couch_BG-01.png"
 
 - title: "Conference Rooms"
   description: "This is the opposite of the individual table. If you take that one, it's guaranteed, that some other nerdy douchebag will go on your nerves and blame you in the end for disturbing you from work and not beeing productive."
+  image: "https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/02_Work_Page/Work_04_Conference_BG-01.png"
