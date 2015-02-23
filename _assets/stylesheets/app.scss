@@ -123,6 +123,14 @@ h6 {
 
 
 #info {
+    .navbar > div > a {
+        color: $dark;
+        &:hover {
+            color: $gray;
+            text-decoration: none;
+        }
+    }
+
     .navlink {
         padding-top: 20px;
         padding-bottom: 20px;
