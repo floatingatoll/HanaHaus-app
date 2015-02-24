@@ -324,17 +324,12 @@ h6 {
 
 .workpage {
     .table {
-        background-image:
-        linear-gradient(
-            rgba(255,255,255,0.7),
-            rgba(255,255,255,0.7)
-        ),
-        url("http://fakeimg.pl/1280x200/?text=Some Image");
         background-image: no-repeat center scroll;
         .tablelisting {
+            width: 100%;
             // FIXME: This repeast a lot of style of the learnpage
             text-align: center;
-            color: $work;
+            color: $light;
 
             h1 {
                 font-size: 30px;
@@ -357,7 +352,18 @@ h6 {
                 color: white;
             }
         }
+
+        // FIXME: get the gradient to cover the entire picture
+        .tablelisting:hover {
+            color: $work;
+            background-image:
+            linear-gradient(
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+            )
+        }
     }
+
 }
 
 #footer-about, #footer-partners, #footer-socialmedia, #footer-findus {
