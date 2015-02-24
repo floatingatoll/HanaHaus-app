@@ -156,6 +156,11 @@ h6 {
         padding: 50px 20px;
     }
 
+    .nofocus {
+        outline: none;
+        box-shadow: none;
+    }
+
     .findus {
         background-color: $primary;
         .adress {
@@ -198,7 +203,66 @@ h6 {
         }
 
         .contactform {
-            background-color: $primary;   
+            background-color: $primary;
+
+            form div {
+                margin: 0;
+                padding: 0;
+            }
+
+            input[type="text"] {
+                border: 1px solid $dark;
+                border-radius: 0px;
+                background-color: $primary;
+                padding: 15px;
+                margin: 0;
+
+                &:focus {
+                    @extend .nofocus;
+                }
+            }
+
+            textarea {
+                border: 1px solid $dark;
+                border-radius: 0px;
+                background-color: $primary;
+                margin: 0;
+
+                &:focus {
+                    @extend .nofocus;
+                }
+            }
+
+            /// TODO: EXAMPLE FOR CHECKBOX
+            input[type="checkbox"] {
+                // display:none;
+            }
+
+            input[type="checkbox"] + label {
+                background: #999;
+                height: 16px;
+                width: 16px;
+                display: inline-block;
+                padding: 0 0 0 0px;
+            }
+
+            input[type="checkbox"]:checked + label {
+                background: #0080FF;
+                height: 16px;
+                width: 16px;
+                display:inline-block;
+                padding: 0 0 0 0px;
+            }
+            /// TODO: END EXAMPLE FOR CHECKBOX
+
+            button {
+                border: 1px solid $dark;
+                background-color: $primary;
+                color: $dark;
+                border-radius: 0px;
+                padding: 10px 25px;
+                font-size: 20px;
+            }
         }
     }
 
