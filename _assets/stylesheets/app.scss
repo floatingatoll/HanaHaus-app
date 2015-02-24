@@ -121,6 +121,11 @@ h6 {
     }
 }
 
+.nofocusinput {
+    outline: none;
+    box-shadow: none;
+}
+
 
 #info {
     .navbar div {
@@ -154,11 +159,6 @@ h6 {
     .footertext {
         font-size: 20px;
         padding: 50px 20px;
-    }
-
-    .nofocus {
-        outline: none;
-        box-shadow: none;
     }
 
     .findus {
@@ -218,7 +218,7 @@ h6 {
                 margin: 0;
 
                 &:focus {
-                    @extend .nofocus;
+                    @extend .nofocusinput;
                 }
             }
 
@@ -229,7 +229,7 @@ h6 {
                 margin: 0;
 
                 &:focus {
-                    @extend .nofocus;
+                    @extend .nofocusinput;
                 }
             }
 
@@ -262,6 +262,14 @@ h6 {
                 border-radius: 0px;
                 padding: 10px 25px;
                 font-size: 20px;
+
+                &:active {
+                    outline: 0;
+                }
+
+                &:hover {
+                    // TODO hover effect color;
+                }
             }
         }
     }
@@ -395,6 +403,14 @@ h6 {
                     @extend .buttonstyle;
                     background-color: $learn;
                     color: white;
+
+                    &:active {
+                        outline: 0;
+                    }
+
+                    &:hover {
+                        // TODO hover effect color;
+                    }
                 }
             }
         }
@@ -429,6 +445,14 @@ h6 {
                 @extend .buttonstyle;
                 background-color: $work;
                 color: white;
+
+                &:active {
+                    outline: 0;
+                }
+
+                &:hover {
+                    // TODO hover effect color;
+                }
             }
         }
 
