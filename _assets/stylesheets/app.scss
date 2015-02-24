@@ -233,6 +233,7 @@ h6 {
                 }
             }
 
+            /// TODO: EXAMPLE FOR CHECKBOX
             input[type="checkbox"] {
                 display:none;
             }
@@ -241,7 +242,7 @@ h6 {
                 background: #999;
                 height: 16px;
                 width: 16px;
-                display:inline-block;
+                display: inline-block;
                 padding: 0 0 0 0px;
             }
 
@@ -251,6 +252,16 @@ h6 {
                 width: 16px;
                 display:inline-block;
                 padding: 0 0 0 0px;
+            }
+            /// TODO: END EXAMPLE FOR CHECKBOX
+
+            button {
+                border: 1px solid $dark;
+                background-color: $primary;
+                color: $dark;
+                border-radius: 0px;
+                padding: 10px 25px;
+                font-size: 20px;
             }
         }
     }
