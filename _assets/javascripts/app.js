@@ -1,6 +1,22 @@
 //= require vendor/jquery.min
 //= require vendor/bootstrap.min
 
+var Loader = function(imageurls) {
+    var loadImage = function(imageurl) {
+        var image = $('<img />').attr('src', imageurl).load();
+    };
+
+  var loadAll = function() {
+    imageurls.forEach(function(image) {
+      loadImage(image);
+    });
+  };
+
+  return {
+    loadAll: loadAll
+  };
+};
+
 $(document).ready(function() {
   var currentFooter = $('#footer-socialmedia');
   $('#footer-socialmedia').show();
@@ -33,4 +49,13 @@ $(document).ready(function() {
     'background-repeat': 'no-repeat',
     'background-position': 'right'
   });
+
+  var loader = new Loader([
+    'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Twitter_Color-01.png',
+    'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Insta_Color-01.png',
+    'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_FB_Color-01.png',
+    'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Yelp_Color-01.png'
+  ]);
+  loader.loadAll();
+  console.log('loaded');
 });
