@@ -21,25 +21,49 @@ $(document).ready(function() {
     var currentFooter = $('#footer-socialmedia');
     $('#footer-socialmedia').show();
 
-    $('#about-footer-nav').click(function() {
+    var aboutNav = $('#about-footer-nav');
+    var partnersNav = $('#partners-footer-nav');
+    var socialNav = $('#social-footer-nav');
+    var findNav = $('#find-footer-nav');
+
+    var removeActiveClasses = function(currentNav) {
+        var menus = [aboutNav, partnersNav, socialNav, findNav];
+        var current = menus.indexOf(currentNav);
+        if(current !== -1) {
+            array.splice(current, 1);
+        }
+        menus.forEach(function(menu) {
+            menu.removeClass('activelink');
+        });
+    };
+
+    aboutNav.click(function() {
+        removeActiveClasses();
+        $(this).addClass('activelink');
         currentFooter.hide(0)
         currentFooter = $('#footer-about');
         $('#footer-about').show();
     });
 
-    $('#partners-footer-nav').click(function() {
+    partnersNav.click(function() {
+        removeActiveClasses();
+        $(this).addClass('activelink');
         currentFooter.hide(0)
         currentFooter = $('#footer-partners');
         $('#footer-partners').show();
     });
 
-    $('#social-footer-nav').click(function() {
+    socialNav.click(function() {
+        removeActiveClasses();
+        $(this).addClass('activelink');
         currentFooter.hide(0)
         currentFooter = $('#footer-socialmedia');
         $('#footer-socialmedia').show();
     });
 
-    $('#find-footer-nav').click(function() {
+    findNav.click(function() {
+        removeActiveClasses();
+        $(this).addClass('activelink');
         currentFooter.hide(0)
         currentFooter = $('#footer-findus');
         $('#footer-findus').show();

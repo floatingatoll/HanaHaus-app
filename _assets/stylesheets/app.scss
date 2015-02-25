@@ -37,6 +37,11 @@
     padding: 50px 20px;
 }
 
+.menuhover {
+    margin-bottom: 20px;
+    border-bottom: 1px solid $dark;
+}
+
 //
 html, body {
     width: 100%;
@@ -166,11 +171,14 @@ h6 {
         margin: 20px;
         text-align: center;
         font-size: 35px;
-
         margin-bottom: 21px;
+
         &:hover {
-            margin-bottom: 20px;
-            border-bottom: 1px solid $dark;
+            @extend .menuhover;
+        }
+
+        &.activelink {
+            @extend .menuhover;
         }
     }
 
