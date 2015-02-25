@@ -9,6 +9,35 @@
 // import our own partials
 // @import "example"
 
+// Mixins
+@mixin buttonstyle($basecolor, $color) {
+    background-color: $basecolor;
+    border-radius: 0px;
+    border: none;
+    color: $color;
+    font-size: 30px;
+    padding: 10px 80px;
+
+    &:hover {
+        background-color: darken($basecolor, 10%);
+    }
+    &:active {
+        outline: 0;
+    }
+}
+
+// Classes to extend
+.nofocusinput {
+    outline: none;
+    box-shadow: none;
+}
+
+.footertext {
+    font-size: 20px;
+    padding: 50px 20px;
+}
+
+//
 html, body {
     width: 100%;
     height: 100%;
@@ -121,12 +150,6 @@ h6 {
     }
 }
 
-.nofocusinput {
-    outline: none;
-    box-shadow: none;
-}
-
-
 #info {
     .navbar div {
         color: $dark;
@@ -156,11 +179,6 @@ h6 {
     }
 
     // === Classes to extend
-    .footertext {
-        font-size: 20px;
-        padding: 50px 20px;
-    }
-
     .findus {
         background-color: $primary;
         .adress {
@@ -256,20 +274,9 @@ h6 {
             /// TODO: END EXAMPLE FOR CHECKBOX
 
             button {
+                @include buttonstyle($primary, $dark);
                 border: 1px solid $dark;
                 background-color: $primary;
-                color: $dark;
-                border-radius: 0px;
-                padding: 10px 25px;
-                font-size: 20px;
-
-                &:active {
-                    outline: 0;
-                }
-
-                &:hover {
-                    // TODO hover effect color;
-                }
             }
         }
     }
@@ -364,20 +371,11 @@ h6 {
     }
 }
 
-.buttonstyle {
-    font-size: 30px;
-    border: none;
-    padding: 10px 80px;
-}
-
 .learnpage {
     .event {
         border-top: 1px solid $dark;
 
         .eventlisting {
-            .red {
-                color: $learn;
-            }
             .caption {
                 font-size: 24px;
             }
@@ -395,23 +393,13 @@ h6 {
                     font-size: 30px;
                 }
                 .time, .date {
-                    @extend .red;
+                    color: $learn;
                 }
                 .day {
                     font-size: 18px;
                 }
                 button {
-                    @extend .buttonstyle;
-                    background-color: $learn;
-                    color: white;
-
-                    &:active {
-                        outline: 0;
-                    }
-
-                    &:hover {
-                        // TODO hover effect color;
-                    }
+                    @include buttonstyle($learn, white);
                 }
             }
         }
@@ -443,17 +431,7 @@ h6 {
             }
 
             button {
-                @extend .buttonstyle;
-                background-color: $work;
-                color: white;
-
-                &:active {
-                    outline: 0;
-                }
-
-                &:hover {
-                    // TODO hover effect color;
-                }
+                @include buttonstyle($learn, white);
             }
         }
 
