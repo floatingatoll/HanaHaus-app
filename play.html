@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<div class="playpage">
+
+    {% include category/header.html title="Play" iconurl="https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/00_Common%20Assets/Circle.png" %}
+    {% for play in site.data.play %}
+    {% include play/play.html image=play.image title=play.title  %}
+    {% endfor %}
+
+</div>
