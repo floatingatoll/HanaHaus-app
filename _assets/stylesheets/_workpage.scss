@@ -1,0 +1,41 @@
+.workpage {
+    .table {
+        background-image: no-repeat center scroll;
+        .tablelisting {
+            width: 100%;
+            // FIXME: This repeast a lot of style of the learnpage
+            text-align: center;
+            color: $light;
+
+            h1 {
+                font-size: 30px;
+                font-weight: 100;
+            }
+
+            p {
+                display: none;
+                font-size: 20px;
+                font-weight: 100;
+            }
+
+            &:hover p {
+                display: block;
+            }
+
+            button {
+                @include buttonstyle($learn, white);
+            }
+        }
+
+        // FIXME: get the gradient to cover the entire picture
+        .tablelisting:hover {
+            color: $work;
+            background-image:
+            linear-gradient(
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+            )
+        }
+    }
+
+}

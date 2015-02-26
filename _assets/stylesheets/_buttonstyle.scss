@@ -1,0 +1,15 @@
+@mixin buttonstyle($basecolor, $color) {
+    background-color: $basecolor;
+    border-radius: 0px;
+    border: none;
+    color: $color;
+    font-size: 30px;
+    padding: 10px 80px;
+
+    &:hover {
+        background-color: darken($basecolor, 10%);
+    }
+    &:active {
+        outline: 0;
+    }
+}
