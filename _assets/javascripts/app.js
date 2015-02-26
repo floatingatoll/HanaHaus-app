@@ -18,8 +18,8 @@ var Loader = function(imageurls) {
 };
 
 $(document).ready(function() {
-    var currentFooter = $('#footer-socialmedia');
-    $('#footer-socialmedia').show();
+    var currentFooter = $('#footer-about');
+    $('#footer-about').show();
 
     var aboutNav = $('#about-footer-nav');
     var partnersNav = $('#partners-footer-nav');
@@ -82,5 +82,4 @@ $(document).ready(function() {
         'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Yelp_Color-01.png'
     ]);
     loader.loadAll();
-    console.log('loaded');
 });
