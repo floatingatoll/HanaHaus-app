@@ -42,6 +42,17 @@
     border-bottom: 1px solid $dark;
 }
 
+@mixin sameheight() {
+    .row {
+        display: table;
+    }
+
+    & > div[class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
 //
 html, body {
     width: 100%;
@@ -214,24 +225,20 @@ h6 {
     }
 
     .about {
-        @extend .footertext;
-        /* background: url(<%= asset_path "club-bg.jpg" %>) no-repeat bottom center scroll; */
-        background: url(http://fakeimg.pl/1600x1400/) no-repeat bottom center scroll;
+        @include sameheight();
+
         .abouttext {
             @extend .footertext;
+            background: url('http://fakeimg.pl/600x400/') no-repeat bottom center scroll;
+        }
+        // TODO What to put there??
+        .otherarea {
+            background-color: $primary;
         }
     }
 
     .partners {
-        .row {
-            display: table;
-        }
-
-        & > div[class*="col-"] {
-            float: none;
-            display: table-cell;
-            vertical-align: top;
-        }
+        @include sameheight();
 
         .infotext {
             @extend .footertext;
