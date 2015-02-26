@@ -1,0 +1,11 @@
+@mixin sameheight() {
+    .row {
+        display: table;
+    }
+
+    & > div[class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
