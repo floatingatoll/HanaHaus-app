@@ -30,33 +30,6 @@
         font-size: 25px;
     }
 
-    // === findus area
-    .findus {
-        background-color: $primary;
-        .adress {
-            font-size: 25px;
-        }
-
-        .parking, .phone {
-            font-size: 20px;
-        }
-
-        .mapcontainer {
-            position: relative;
-            padding-bottom: 600px;
-            height: 0;
-            overflow: hidden;
-
-            & embed {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
     // === about area
     .about {
         @include sameheight();
@@ -200,6 +173,33 @@
                 &:hover {
                     background: url('https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Yelp_Color-01.png');
                 }
+            }
+        }
+    }
+
+    // === findus area
+    .findus {
+        background-color: $primary;
+        .adress {
+            font-size: 25px;
+        }
+
+        .parking, .phone {
+            font-size: 20px;
+        }
+
+        .mapcontainer {
+            position: relative;
+            padding-bottom: 600px;
+            height: 0;
+            overflow: hidden;
+
+            & embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
             }
         }
     }
