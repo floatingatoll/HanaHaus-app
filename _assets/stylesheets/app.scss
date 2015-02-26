@@ -9,7 +9,7 @@
 // import our own partials
 // @import "example"
 
-// Mixins
+// ====== Mixins
 @mixin buttonstyle($basecolor, $color) {
     background-color: $basecolor;
     border-radius: 0px;
@@ -38,7 +38,7 @@
     }
 }
 
-// Classes to extend
+// ====== Extensions (classes to extend)
 .nofocusinput {
     outline: none;
     box-shadow: none;
@@ -54,7 +54,7 @@
     border-bottom: 1px solid $dark;
 }
 
-//
+// ====== General styles
 html, body {
     width: 100%;
     height: 100%;
@@ -81,6 +81,7 @@ h6 {
     letter-spacing: 1px;
 }
 
+// ====== The three colors
 .work {
 	color: $work;
 }
@@ -93,6 +94,8 @@ h6 {
 	color: $play;
 }
 
+
+// ====== The intro area of the main page
 .intro {
     display: table;
     width: 100%;
@@ -129,6 +132,8 @@ h6 {
     }
 }
 
+
+// ====== The overview area of the main page with the three areas work/learn/play
 .overview {
     height: 300px;
     color: $dark;
@@ -167,7 +172,9 @@ h6 {
     }
 }
 
+// ====== The info area of the main page with the four areas findus/about/partners/social
 #info {
+    // === general
     .navbar div {
         color: $dark;
         &:hover {
@@ -198,7 +205,7 @@ h6 {
         font-size: 25px;
     }
 
-    // === Classes to extend
+    // === findus area
     .findus {
         background-color: $primary;
         .adress {
@@ -225,6 +232,7 @@ h6 {
         }
     }
 
+    // === about area
     .about {
         @include sameheight();
 
@@ -238,6 +246,7 @@ h6 {
         }
     }
 
+    // === partners area
     .partners {
         @include sameheight();
 
@@ -307,6 +316,7 @@ h6 {
         }
     }
 
+    // === socialarea
     .socialmedia {
         background-color: $primary;
         height: auto;
@@ -369,6 +379,7 @@ h6 {
         }
     }
 
+    // === footerarea
     .footer {
         background-color: $footer;
         .footerlink {
@@ -384,6 +395,7 @@ h6 {
         }
     }
 
+    // === copyright area
     .copyright {
         bottom: 0px;
         text-align: center;
@@ -392,6 +404,7 @@ h6 {
     }
 }
 
+// ===== general header for work/learn/play detail pages
 .header {
     padding-bottom: 25px;
 
@@ -408,6 +421,7 @@ h6 {
     }
 }
 
+// ===== the learn detail page
 .learnpage {
     .event {
         border-top: 1px solid $dark;
@@ -443,6 +457,8 @@ h6 {
     }
 }
 
+
+// ===== the play detail page
 .workpage {
     .table {
         background-image: no-repeat center scroll;
