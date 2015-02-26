@@ -26,6 +26,18 @@
     }
 }
 
+@mixin sameheight() {
+    .row {
+        display: table;
+    }
+
+    & > div[class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
 // Classes to extend
 .nofocusinput {
     outline: none;
@@ -42,17 +54,6 @@
     border-bottom: 1px solid $dark;
 }
 
-@mixin sameheight() {
-    .row {
-        display: table;
-    }
-
-    & > div[class*="col-"] {
-        float: none;
-        display: table-cell;
-        vertical-align: top;
-    }
-}
 //
 html, body {
     width: 100%;
