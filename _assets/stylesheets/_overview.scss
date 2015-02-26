@@ -15,6 +15,23 @@
         font-size: 35px;
         color: $dark;
     }
+
+    .fullsizeimage {
+        background-size: 100% auto;
+    }
+
+    .work-image {
+        @extend .fullsizeimage;
+        background: url('https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Work_Image_Home_Page-01.png');
+    }
+    .learn-image {
+        @extend .fullsizeimage;
+        background: url('https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Learn_Image_Home_Page-01.png');
+    }
+    .play-image {
+        @extend .fullsizeimage;
+        background: url('https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Play_Image_Home_Page-01.png');
+    }
 }
 
 #work {
