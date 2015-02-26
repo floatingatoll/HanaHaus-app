@@ -223,6 +223,16 @@ h6 {
     }
 
     .partners {
+        .row {
+            display: table;
+        }
+
+        & > div[class*="col-"] {
+            float: none;
+            display: table-cell;
+            vertical-align: top;
+        }
+
         .infotext {
             @extend .footertext;
             background-color: $primary-dark;
