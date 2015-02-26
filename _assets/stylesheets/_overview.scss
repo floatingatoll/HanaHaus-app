@@ -1,5 +1,6 @@
 .overview {
-    height: 300px;
+    $overview-height: 300px;
+    height: $overview-height;
     color: $dark;
     background-color: $primary;
 
@@ -17,7 +18,7 @@
     }
 
     .fullsizeimage {
-        background-size: 100% auto;
+        height: $overview-height;
     }
 
     .work-image {
