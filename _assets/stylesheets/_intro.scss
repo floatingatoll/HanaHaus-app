@@ -3,11 +3,11 @@
     width: 100%;
     height: 100vh;
     text-align: center;
-    color: $light;
+    color: $dark;
     background-image:
         linear-gradient(
-            rgba(0,0,0,0.7),
-            rgba(0,0,0,0.7)
+            rgba(255,255,255,0.7),
+            rgba(255,255,255,0.7)
         ),
         url('https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/HanaHausCourtyard.png');
     background-image: no-repeat bottom center scroll;
@@ -29,6 +29,7 @@
         }
 
         .intro-text {
+            color: $dark;
             font-size: 18px;
         }
     }
