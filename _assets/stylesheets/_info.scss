@@ -1,6 +1,11 @@
 #info {
     // === general
+    .navbar {
+        margin-bottom: 0px;
+    }
+    
     .navbar div {
+        background-color: $footer-tabs;
         color: $dark;
         &:hover {
             cursor: pointer;
