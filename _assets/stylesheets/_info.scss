@@ -1,5 +1,10 @@
 #info {
     // === general
+
+    .col-md-2-4 {
+      @include make-md-column(2.4)
+    }
+    
     .navbar div {
         color: $dark;
         &:hover {
