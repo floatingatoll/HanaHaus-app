@@ -1,8 +1,10 @@
 .playpage {
     .table {
         background-image: no-repeat center scroll;
+
         .tablelisting {
             width: 100%;
+            height: 300px;
             // FIXME: This repeast a lot of style of the learnpage
             text-align: center;
             color: $light;
