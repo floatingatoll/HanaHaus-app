@@ -5,30 +5,30 @@
         <p>In addition, we offer a large 8000 sq. ft. "theatersque" space available to rent for your next event. In whichever way HanaHaus can support you, please use the form</p>
     </div>
     <div class="col-md-8 contactform">
-        <form>
+        <form name="contactform" method="post" action="send_form_email.php">
             <div class="checkbox">
                 <label>
-                    <input type="checkbox"> Become a Tech Desk partner
+                    <input name="techdesk" type="checkbox"> Become a Tech Desk partner
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox"> Host and event in the HanaHaus
+                    <input name="host" type="checkbox"> Host an event in the HanaHaus
                 </label>
             </div>
             <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="First Name">
+                <input name="firstname" type="text" class="form-control" placeholder="First Name">
             </div>
             <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="Last Name">
+                <input name="lastname" type="text" class="form-control" placeholder="Last Name">
             </div>
             <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="Email">
+                <input name="email" type="text" class="form-control" placeholder="Email">
             </div>
             <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="Phone">
+                <input name="phone" type="text" class="form-control" placeholder="Phone">
             </div>
-            <textarea class="form-control" rows="6"></textarea>
+            <textarea name="message" class="form-control" rows="6"></textarea>
             <button type="submit" class="btn btn-primary pull-right">Submit</button>
         </form>
     </div>
