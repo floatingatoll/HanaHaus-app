@@ -18,16 +18,17 @@ var Loader = function(imageurls) {
 };
 
 function initFooter() {
-    var currentFooter = $('#footer-about');
-    $('#footer-about').show();
+    var currentFooter = $('#footer-menu');
+    currentFooter.show();
 
+    var menuNav = $('#menu-footer-nav');
     var aboutNav = $('#about-footer-nav');
     var partnersNav = $('#partners-footer-nav');
     var socialNav = $('#social-footer-nav');
     var findNav = $('#find-footer-nav');
 
     var removeActiveClasses = function(currentNav) {
-        var menus = [aboutNav, partnersNav, socialNav, findNav];
+        var menus = [menuNav, aboutNav, partnersNav, socialNav, findNav];
         var current = menus.indexOf(currentNav);
         if(current !== -1) {
             array.splice(current, 1);
@@ -36,6 +37,14 @@ function initFooter() {
             menu.removeClass('activelink');
         });
     };
+
+    menuNav.click(function() {
+        removeActiveClasses();
+        $(this).addClass('activelink');
+        currentFooter.hide(0)
+        currentFooter = $('#footer-menu');
+        $('#footer-menu').show();
+    });
 
     aboutNav.click(function() {
         removeActiveClasses();
