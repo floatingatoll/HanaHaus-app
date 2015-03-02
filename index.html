@@ -68,10 +68,10 @@ layout: default
   <div>
     <nav class="navbar" role="navigation">
       <div class="col-md-2-4">
-        <div class="navlink activelink" id="about-footer-nav">Menu</div>
+        <div class="navlink activelink" id="menu-footer-nav">Menu</div>
       </div>
       <div class="col-md-2-4">
-        <div class="navlink activelink" id="about-footer-nav">About Us</div>
+        <div class="navlink" id="about-footer-nav">About Us</div>
       </div>
       <div class="col-md-2-4">
         <div class="navlink" id="partners-footer-nav">Partners</div>
@@ -86,6 +86,7 @@ layout: default
   </div>
 
   <!-- Dynamic footer content -->
+  {% include menu.html %}
   {% include about.html %}
   {% include partners.html %}
   {% include socialmedia.html %}
@@ -106,7 +107,7 @@ layout: default
     </div>
     <div class="copyright">
       <div class="col-md-12">
-        <p>Corpyright &#169; 2015 HanaHaus. All rights reserved.</p>
+        <p>Copyright &#169; 2015 HanaHaus. All rights reserved.</p>
       </div>
     </div>
   </div>
