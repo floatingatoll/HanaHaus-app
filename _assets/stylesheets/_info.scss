@@ -1,6 +1,11 @@
 #info {
     // === general
 
+    .footer-box {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .col-md-2-4 {
       @include make-md-column(2.4)
     }
