@@ -21,6 +21,10 @@
         height: $overview-height;
     }
 
+    .description {
+        padding-top: 25px;
+    }
+
     .work-image {
         @extend .fullsizeimage;
         background: url('https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Work_Image_Home_Page-01.png');
