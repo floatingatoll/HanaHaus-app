@@ -93,9 +93,27 @@ function initDownScroll() {
     });
 }
 
+function initFormSubmission() {
+    var url = 'https://getsimpleform.com/messages?form_api_token=b77fbdb1558ac9e48dde0bffba09f9c9';
+    var button =  $('#contactformbutton');
+    var messagesuccess = $('#messagesuccess');
+    // var messageerror = $('#messageerror');
+
+    button.click(function(event) {
+        console.log('click');
+        event.preventDefault();
+        $.post(url, $('#contactform').serialize(), function(data) {
+            button.hide(0);
+            messagesuccess.show();
+        }, 'json');
+    });
+}
+
 $(document).ready(function() {
     initFooter();
     initDownScroll();
+    initFormSubmission();
+
 
     var loader = new Loader([
         /* Social: Hover images */
