@@ -17,7 +17,7 @@ var Loader = function(imageurls) {
     };
 };
 
-$(document).ready(function() {
+function initFooter() {
     var currentFooter = $('#footer-about');
     $('#footer-about').show();
 
@@ -73,6 +73,20 @@ $(document).ready(function() {
         'background-repeat': 'no-repeat',
         'background-position': 'right'
     });
+}
+
+function initDownScroll() {
+    $('#arrowdown').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#work").offset().top
+        }, 1000);
+    });
+}
+
+$(document).ready(function() {
+    initFooter();
+    initDownScroll();
 
     var loader = new Loader([
         /* Social: Hover images */
