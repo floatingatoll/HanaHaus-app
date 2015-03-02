@@ -41,7 +41,7 @@ function initFooter() {
     menuNav.click(function() {
         removeActiveClasses();
         $(this).addClass('activelink');
-        currentFooter.hide(0)
+        currentFooter.hide()
         currentFooter = $('#footer-menu');
         $('#footer-menu').show();
     });
@@ -49,7 +49,7 @@ function initFooter() {
     aboutNav.click(function() {
         removeActiveClasses();
         $(this).addClass('activelink');
-        currentFooter.hide(0)
+        currentFooter.hide()
         currentFooter = $('#footer-about');
         $('#footer-about').show();
     });
@@ -57,7 +57,7 @@ function initFooter() {
     partnersNav.click(function() {
         removeActiveClasses();
         $(this).addClass('activelink');
-        currentFooter.hide(0)
+        currentFooter.hide()
         currentFooter = $('#footer-partners');
         $('#footer-partners').show();
     });
@@ -65,7 +65,7 @@ function initFooter() {
     socialNav.click(function() {
         removeActiveClasses();
         $(this).addClass('activelink');
-        currentFooter.hide(0)
+        currentFooter.hide()
         currentFooter = $('#footer-socialmedia');
         $('#footer-socialmedia').show();
     });
@@ -73,7 +73,7 @@ function initFooter() {
     findNav.click(function() {
         removeActiveClasses();
         $(this).addClass('activelink');
-        currentFooter.hide(0)
+        currentFooter.hide()
         currentFooter = $('#footer-findus');
         $('#footer-findus').show();
     });
@@ -93,9 +93,27 @@ function initDownScroll() {
     });
 }
 
+function initFormSubmission() {
+    var url = 'https://getsimpleform.com/messages?form_api_token=b77fbdb1558ac9e48dde0bffba09f9c9';
+    var button =  $('#contactformbutton');
+    var messagesuccess = $('#messagesuccess');
+    // var messageerror = $('#messageerror');
+
+    button.click(function(event) {
+        console.log('click');
+        event.preventDefault();
+        $.post(url, $('#contactform').serialize(), function(data) {
+            button.hide();
+            messagesuccess.show();
+        }, 'json');
+    });
+}
+
 $(document).ready(function() {
     initFooter();
     initDownScroll();
+    initFormSubmission();
+
 
     var loader = new Loader([
         /* Social: Hover images */
