@@ -6,6 +6,7 @@
     }
     
     .navbar div {
+        background-color: $footer-tabs;
         color: $dark;
         &:hover {
             cursor: pointer;
