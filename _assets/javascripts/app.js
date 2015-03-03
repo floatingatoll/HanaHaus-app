@@ -87,10 +87,41 @@ function initFooter() {
 function initDownScroll() {
     $('#arrowdown').click(function(event) {
         event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $("#work").offset().top
-        }, 1000);
+        if ($(window).width() < 500) {
+            $('html, body').animate({
+                scrollTop: $("#work").offset().top - ($('#home-hamburger-2').height() - 5)
+            }, 1000);
+        }
+        else {
+            $('html, body').animate({
+                scrollTop: $("#work").offset().top
+            }, 1000);
+        }
     });
+}
+
+// for mobile site
+function initChangeMenu() {
+    var interval = setInterval(function() {
+        if (($('#menuThing').is(":visible")) && $(window).scrollTop() >= $('.intro-text').offset().top - 100) {
+            $('#menuThing').fadeOut(200);
+        }
+        if ((!$('#menuThing').is(":visible")) && $(window).scrollTop() < $('.intro-text').offset().top - 100) {
+            $('#menuThing').fadeIn(200);
+        }
+        if ((!$('#menuThing2').is(":visible")) && $(window).scrollTop() >= $("#work").offset().top-$('#home-hamburger-2').height()) {
+            $('#home-hamburger-2-bg').fadeIn(200);
+            $('#menuThing2').fadeIn(200);
+            $('#hhLogo').fadeIn(200);
+        }
+
+        if (($('#menuThing2').is(":visible")) && $(window).scrollTop() < $("#work").offset().top-$('#home-hamburger-2').height()) {
+            $('#home-hamburger-2-bg').fadeOut(200);
+            $('#menuThing2').fadeOut(200);
+            $('#hhLogo').fadeOut(200);
+        }
+
+    }, 100);
 }
 
 function initFormSubmission() {
@@ -110,6 +141,7 @@ function initFormSubmission() {
 }
 
 $(document).ready(function() {
+    initChangeMenu();
     initFooter();
     initDownScroll();
     initFormSubmission();
