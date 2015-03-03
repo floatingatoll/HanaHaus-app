@@ -2,6 +2,7 @@
 //= require vendor/bootstrap.min
 
 var mobileInterval;
+var currentScrollPosition = 0;
 
 var Loader = function(imageurls) {
     var loadImage = function(imageurl) {
@@ -126,6 +127,31 @@ function initChangeMenu() {
     }, 100);
 }
 
+function initModalClick() {
+    $('.click-to-show-menu').click(function() {
+        currentScrollPosition = $(window.scrollTop);
+        $('#main-content').fadeOut(200, function() {
+            $('#menu-modal').fadeIn(200, function() {
+                console.log('kek');
+            });
+        });
+    });
+}
+
+function initBackButton() {
+    $('#back-button').click(function() {
+        $('#menu-modal').fadeOut(200, function() {
+            $('#main-content').fadeIn(200, function() {
+                // FIXME: find a way to return to previous scroll position
+                // prior to opening the modal
+                $('html, body').animate({
+                    scrollTop: currentScrollPosition
+                }, 0);
+            });
+        });
+    });
+}
+
 function initFormSubmission() {
     var url = 'https://getsimpleform.com/messages?form_api_token=b77fbdb1558ac9e48dde0bffba09f9c9';
     var button =  $('#contactformbutton');
@@ -146,6 +172,8 @@ $(document).ready(function() {
     initFooter();
     initDownScroll();
     initFormSubmission();
+    initModalClick();
+    initBackButton();
 
     if ($(window).width() < 500) {
         initChangeMenu();

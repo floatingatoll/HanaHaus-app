@@ -83,6 +83,9 @@ h6 {
 // ===== the hamburger menu for content pages
 @import "content_hamburger";
 
+// ===== the mobile menu
+@import "menu_modal";
+
 #footer-about, #footer-partners, #footer-socialmedia, #footer-findus {
     display: none;
 }
@@ -90,4 +93,8 @@ h6 {
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.click-to-show-menu:hover {
+    cursor: pointer;
 }
