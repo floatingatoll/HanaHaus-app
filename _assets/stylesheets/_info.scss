@@ -18,11 +18,10 @@
     }
     
     .navbar div {
-        background-color: $footer-tabs;
-        color: $dark;
+        background-color: $gray-light;
+        color: $font-dark;
         &:hover {
             cursor: pointer;
-            color: $gray;
             text-decoration: none;
         }
     }
@@ -31,9 +30,11 @@
         padding-top: 20px;
         padding-bottom: 20px;
         margin: 20px;
+        // For the border on hover
+        margin-bottom: 22px;
+
         text-align: center;
         font-size: 35px;
-        margin-bottom: 21px;
 
         &:hover {
             @extend .menuhover;
@@ -56,9 +57,8 @@
             @extend .footertext;
             background: url('http://fakeimg.pl/600x400/') no-repeat bottom center scroll;
         }
-        // TODO What to put there??
         .otherarea {
-            background-color: $primary;
+            background-color: $primary-dark;
         }
     }
 
@@ -68,11 +68,11 @@
 
         .infotext {
             @extend .footertext;
-            background-color: $primary-dark;
+            background-color: $light;
         }
 
         .contactform {
-            background-color: $primary;
+            background-color: $primary-dark;
 
             form div {
                 margin: 0;
@@ -82,7 +82,7 @@
             input[type="text"] {
                 border: 1px solid $dark;
                 border-radius: 0px;
-                background-color: $primary;
+                background-color: $primary-dark;
                 padding: 15px;
                 margin: 0;
 
@@ -94,7 +94,7 @@
             textarea {
                 border: 1px solid $dark;
                 border-radius: 0px;
-                background-color: $primary;
+                background-color: $primary-dark;
                 margin: 0;
 
                 &:focus {
@@ -103,38 +103,37 @@
             }
 
             /// TODO: EXAMPLE FOR CHECKBOX
-            input[type="checkbox"] {
-                // display:none;
-            }
+            // input[type="checkbox"] {
+            //     // display:none;
+            // }
 
-            input[type="checkbox"] + label {
-                background: #999;
-                height: 16px;
-                width: 16px;
-                display: inline-block;
-                padding: 0 0 0 0px;
-            }
+            // input[type="checkbox"] + label {
+            //     background: #999;
+            //     height: 16px;
+            //     width: 16px;
+            //     display: inline-block;
+            //     padding: 0 0 0 0px;
+            // }
 
-            input[type="checkbox"]:checked + label {
-                background: #0080FF;
-                height: 16px;
-                width: 16px;
-                display:inline-block;
-                padding: 0 0 0 0px;
-            }
+            // input[type="checkbox"]:checked + label {
+            //     background: #0080FF;
+            //     height: 16px;
+            //     width: 16px;
+            //     display:inline-block;
+            //     padding: 0 0 0 0px;
+            // }
             /// TODO: END EXAMPLE FOR CHECKBOX
 
             button {
-                @include buttonstyle($primary, $dark);
+                @include buttonstyle($primary-dark, $dark);
                 border: 1px solid $dark;
-                background-color: $primary;
             }
         }
     }
 
     // === socialarea
     .socialmedia {
-        background-color: $primary;
+        background-color: $primary-dark;
         height: auto;
         padding: 0px 100px;
 
@@ -197,8 +196,7 @@
 
     // === findus area
     .findus {
-        background-color: $primary;
-        // padding: 0px 0px;
+        background-color: $light;
 
         .adress {
             font-size: 25px;
@@ -226,12 +224,13 @@
 
     // === footerarea
     .footer {
-        background-color: $footer;
+        background-color: $gray-light;
         .footerlink {
             margin-top: 25px;
             margin-bottom: 25px;
+            color: $font-dark;
             font-size: 15px;
-            border-right: 1px solid $dark;
+            border-right: 1px solid $font-dark;
             text-align: center;
 
             &:last-child {

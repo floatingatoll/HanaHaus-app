@@ -1,7 +1,7 @@
 .overview {
-    $overview-height: 300px;
+    $overview-height: 350px;
 
-    color: $dark;
+    color: $font-gray;
     background-color: $light;
 
     text-align: center;
@@ -14,7 +14,7 @@
     a {
         text-transform: uppercase;
         font-size: 35px;
-        color: $dark;
+        color: $font-gray;
     }
 
     .fullsizeimage {
