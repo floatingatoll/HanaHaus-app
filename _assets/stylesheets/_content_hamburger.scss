@@ -1,4 +1,4 @@
-#home-hamburger {
+#content-hamburger {
 	position: fixed;
 	width: 100%;
 	text-align: center;
@@ -8,23 +8,16 @@
 	background-color: $footer-tabs;
 	display: none;
 	z-index: 100;
-}
 
-#home-hamburger-2 {
-	position: fixed;
-	width: 100%;
-	text-align: center;
-	font-size: 64px;
-	line-height: 108px;
-	height: 108px;
-	background-color: $footer-tabs;
-	z-index: 100;
-
-	#hhLogo {
-		width: 72px;
-		height: 72px;
+	#icon {
+		padding-left: 40%;
 		float: left;
 		margin-left: 10px;
+	}
+
+	#title {
+		float: left;
+		margin-right: 10px;
 	}
 
 	#menuThing {
@@ -34,13 +27,13 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 500px) {
-	#home-hamburger-2 {
+	#content-hamburger {
 		display: block;
 	}
 }
 
 @media screen and (min-width: 501px) {
-	#home-hamburger-2 {
+	#content-hamburger {
 		display: none;
 	}
 }

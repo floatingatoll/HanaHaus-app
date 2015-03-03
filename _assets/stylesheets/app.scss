@@ -80,6 +80,9 @@ h6 {
 // ===== the hamburger menu
 @import "hamburger";
 
+// ===== the hamburger menu for content pages
+@import "content_hamburger";
+
 #footer-about, #footer-partners, #footer-socialmedia, #footer-findus {
     display: none;
 }
