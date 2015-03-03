@@ -1,6 +1,9 @@
 //= require vendor/jquery.min
 //= require vendor/bootstrap.min
 
+var mobileInterval;
+var currentScrollPosition = 0;
+
 var Loader = function(imageurls) {
     var loadImage = function(imageurl) {
         var image = $('<img />').attr('src', imageurl).load();
@@ -87,9 +90,65 @@ function initFooter() {
 function initDownScroll() {
     $('#arrowdown').click(function(event) {
         event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $("#work").offset().top
-        }, 1000);
+        if ($(window).width() < 500) {
+            $('html, body').animate({
+                scrollTop: $("#work").offset().top - ($('#home-hamburger-2').height() - 5)
+            }, 1000);
+        }
+        else {
+            $('html, body').animate({
+                scrollTop: $("#work").offset().top
+            }, 1000);
+        }
+    });
+}
+
+// for mobile site
+function initChangeMenu() {
+    mobileInterval = setInterval(function() {
+        if (($('#menuThing').is(":visible")) && $(window).scrollTop() >= $('.intro-text').offset().top - 100) {
+            $('#menuThing').fadeOut(200);
+        }
+        if ((!$('#menuThing').is(":visible")) && $(window).scrollTop() < $('.intro-text').offset().top - 100) {
+            $('#menuThing').fadeIn(200);
+        }
+        if ((!$('#menuThing2').is(":visible")) && $(window).scrollTop() >= $("#work").offset().top-$('#home-hamburger-2').height()) {
+            $('#home-hamburger-2-bg').fadeIn(200);
+            $('#menuThing2').fadeIn(200);
+            $('#hhLogo').fadeIn(200);
+        }
+
+        if (($('#menuThing2').is(":visible")) && $(window).scrollTop() < $("#work").offset().top-$('#home-hamburger-2').height()) {
+            $('#home-hamburger-2-bg').fadeOut(200);
+            $('#menuThing2').fadeOut(200);
+            $('#hhLogo').fadeOut(200);
+        }
+
+    }, 100);
+}
+
+function initModalClick() {
+    $('.click-to-show-menu').click(function() {
+        currentScrollPosition = $(window.scrollTop);
+        $('#main-content').fadeOut(200, function() {
+            $('#menu-modal').fadeIn(200, function() {
+                console.log('kek');
+            });
+        });
+    });
+}
+
+function initBackButton() {
+    $('#back-button').click(function() {
+        $('#menu-modal').fadeOut(200, function() {
+            $('#main-content').fadeIn(200, function() {
+                // FIXME: find a way to return to previous scroll position
+                // prior to opening the modal
+                $('html, body').animate({
+                    scrollTop: currentScrollPosition
+                }, 0);
+            });
+        });
     });
 }
 
@@ -113,7 +172,12 @@ $(document).ready(function() {
     initFooter();
     initDownScroll();
     initFormSubmission();
+    initModalClick();
+    initBackButton();
 
+    if ($(window).width() < 500) {
+        initChangeMenu();
+    }
 
     var loader = new Loader([
         /* Social: Hover images */
@@ -124,3 +188,12 @@ $(document).ready(function() {
     ]);
     loader.loadAll();
 });
+
+$(window).resize(function() {
+    if ($(window).width() >= 500) {
+        clearInterval(mobileInterval);
+    }
+    else if ($(window).width() < 500) {
+        initChangeMenu();
+    }
+})

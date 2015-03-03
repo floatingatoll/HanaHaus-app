@@ -1,0 +1,48 @@
+#menu-modal {
+	position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: $footer-tabs;
+    color: $dark;
+    z-index: 9999;
+    display: none;
+
+    .navbar {
+        width: 100%;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    
+    .navbar div {
+        background-color: $footer-tabs;
+        color: $dark;
+        &:hover {
+            cursor: pointer;
+            color: $gray;
+            text-decoration: none;
+        }
+    }
+
+    .navlink {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 20px;
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 21px;
+
+        &:hover {
+            @extend .menuhover;
+        }
+
+        &.activelink {
+            @extend .menuhover;
+        }
+    }
+
+    i {
+        font-size: 25px;
+    }
+}
