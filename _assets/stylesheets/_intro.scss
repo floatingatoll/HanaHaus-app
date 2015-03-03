@@ -4,20 +4,21 @@
     -webkit-background-size: cover;
     background-image:
         linear-gradient(
-            rgba(255,255,255,0.8),
-            rgba(255,255,255,0.8)
+            rgba(255,255,255,0.9),
+            rgba(255,255,255,0.9)
         ),
         url('https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/HanaHausCourtyard.png');
     background-image: no-repeat bottom center scroll;
     background-size: cover;
     color: $dark;
     height: 100vh;
+    // TODO fix vertical alignment
     text-align: center;
     vertical-align: middle;
     width: 100%;
 
     .logo {
-        margin-bottom: 100px;
+        margin-bottom: 25px;
     }
 
     .categoryicon {
@@ -25,7 +26,6 @@
     }
 
     .intro-text {
-        color: $dark;
         font-size: 18px;
     }
 }

@@ -20,6 +20,17 @@ var Loader = function(imageurls) {
     };
 };
 
+function initLoadImages() {
+    var loader = new Loader([
+        /* Social: Hover images */
+        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Twitter_Color-01.png',
+        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Insta_Color-01.png',
+        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_FB_Color-01.png',
+        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Yelp_Color-01.png'
+    ]);
+    loader.loadAll();
+}
+
 function initFooter() {
     var currentFooter = $('#footer-menu');
     currentFooter.show();
@@ -168,32 +179,25 @@ function initFormSubmission() {
     });
 }
 
+// DOCUMENT
 $(document).ready(function() {
     initFooter();
     initDownScroll();
     initFormSubmission();
+    initLoadImages();
     initModalClick();
     initBackButton();
 
     if ($(window).width() < 500) {
         initChangeMenu();
     }
-
-    var loader = new Loader([
-        /* Social: Hover images */
-        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Twitter_Color-01.png',
-        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Insta_Color-01.png',
-        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_FB_Color-01.png',
-        'https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/01_Home%20Screen/Social_Yelp_Color-01.png'
-    ]);
-    loader.loadAll();
 });
 
+// WINDOW
 $(window).resize(function() {
-    if ($(window).width() >= 500) {
-        clearInterval(mobileInterval);
-    }
-    else if ($(window).width() < 500) {
+    if($(window).width() < 500) {
         initChangeMenu();
+    } else {
+        clearInterval(mobileInterval);
     }
 })
