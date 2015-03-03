@@ -195,9 +195,9 @@ $(document).ready(function() {
 
 // WINDOW
 $(window).resize(function() {
-    if ($(window).width() >= 500) {
-        clearInterval(mobileInterval);
-    } else if ($(window).width() < 500) {
+    if($(window).width() < 500) {
         initChangeMenu();
+    } else {
+        clearInterval(mobileInterval);
     }
 })
