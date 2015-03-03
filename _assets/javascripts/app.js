@@ -1,6 +1,8 @@
 //= require vendor/jquery.min
 //= require vendor/bootstrap.min
 
+var mobileInterval;
+
 var Loader = function(imageurls) {
     var loadImage = function(imageurl) {
         var image = $('<img />').attr('src', imageurl).load();
@@ -102,7 +104,7 @@ function initDownScroll() {
 
 // for mobile site
 function initChangeMenu() {
-    var interval = setInterval(function() {
+    mobileInterval = setInterval(function() {
         if (($('#menuThing').is(":visible")) && $(window).scrollTop() >= $('.intro-text').offset().top - 100) {
             $('#menuThing').fadeOut(200);
         }
@@ -141,11 +143,13 @@ function initFormSubmission() {
 }
 
 $(document).ready(function() {
-    initChangeMenu();
     initFooter();
     initDownScroll();
     initFormSubmission();
 
+    if ($(window).width() < 500) {
+        initChangeMenu();
+    }
 
     var loader = new Loader([
         /* Social: Hover images */
@@ -156,3 +160,12 @@ $(document).ready(function() {
     ]);
     loader.loadAll();
 });
+
+$(window).resize(function() {
+    if ($(window).width() >= 500) {
+        clearInterval(mobileInterval);
+    }
+    else if ($(window).width() < 500) {
+        initChangeMenu();
+    }
+})
