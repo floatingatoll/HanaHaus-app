@@ -53,13 +53,9 @@
     // === about area
     .about {
         @include sameheight();
-
+        background-color: $primary-dark;
         .abouttext {
             @extend .footertext;
-            background: url('http://fakeimg.pl/600x400/') no-repeat bottom center scroll;
-        }
-        .otherarea {
-            background-color: $primary-dark;
         }
     }
 
