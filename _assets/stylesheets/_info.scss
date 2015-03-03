@@ -19,7 +19,7 @@
     }
     
     .navbar div {
-        background-color: $gray-light;
+        background-color: $lightgray;
         color: $font-dark;
         &:hover {
             cursor: pointer;
@@ -225,7 +225,7 @@
 
     // === footerarea
     .footer {
-        background-color: $gray-light;
+        background-color: $lightgray;
         .footerlink {
             margin-top: 25px;
             margin-bottom: 25px;
