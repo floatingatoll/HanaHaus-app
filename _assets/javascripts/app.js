@@ -16,7 +16,7 @@ var Loader = function(imageurls) {
     };
 };
 
-var HanaHausApp = {
+var hanaHausApp = {
     mobileInterval: null,
     currentScrollPosition: 0,
     initLoadImages: function() {
@@ -174,16 +174,14 @@ var HanaHausApp = {
     }
 };
 
-var hh = new HanaHausApp();
-
 // DOCUMENT
 $(document).ready(function() {
-    hh.initFooter();
-    hh.initDownScroll();
-    hh.initFormSubmission();
-    hh.initLoadImages();
-    hh.initModalClick();
-    hh.initBackButton();
+    hanaHausApp.initFooter();
+    hanaHausApp.initDownScroll();
+    hanaHausApp.initFormSubmission();
+    hanaHausApp.initLoadImages();
+    hanaHausApp.initModalClick();
+    hanaHausApp.initBackButton();
 
     if ($(window).width() < 500) {
         initChangeMenu();
@@ -193,7 +191,7 @@ $(document).ready(function() {
 // WINDOW
 $(window).resize(function() {
     if($(window).width() < 500) {
-        initChangeMenu();
+        hanaHausApp.initChangeMenu();
     } else {
         clearInterval(mobileInterval);
     }
