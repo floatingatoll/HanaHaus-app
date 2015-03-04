@@ -222,13 +222,24 @@
     // === footerarea
     .footer {
         background-color: $lightgray;
+        padding-top: 25px;
+
         .footerlink {
-            margin-top: 25px;
-            margin-bottom: 25px;
-            color: $font-dark;
             font-size: 15px;
             border-right: 1px solid $font-dark;
             text-align: center;
+
+            > a {
+                display: block;
+                padding: 10px 20px;
+                color: $font-dark;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: $darkgray;
+                }
+            }
 
             &:last-child {
                 border-right: none;
