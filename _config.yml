@@ -5,7 +5,7 @@ description: > #
   A new café experience where creative individuals
   and entrepreneurs can come together to meet, socialize, 
   share ideas and connect with experts.
-# baseurl: "/HanaHaus-app" # the subpath of your site, e.g. /blog/
+baseurl: "/HanaHaus-app" # the subpath of your site, e.g. /blog/
 url: "http://hanahaus.com" # the base hostname & protocol for your site
 twitter_username: HanaHausBayArea
 github_username:  HanaHaus
