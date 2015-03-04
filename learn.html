@@ -6,6 +6,6 @@ layout: default
 <div class="learnpage">
     {% include category/header.html title="Learn" iconurl="https://raw.githubusercontent.com/HanaHaus/HanaHaus-ux/master/01_Website/Assets/00_Common%20Assets/Triangle-01.png" %}
     {% for event in site.data.events %}
-    {% include events/event.html   title=event.title author=event.author description=event.description time=event.time date=event.date day=event.day %}
+    {% include events/event.html   title=event.title author=event.author description=event.description time=event.time date=event.date day=event.day category=event.category %}
     {% endfor %} 
 </div>
