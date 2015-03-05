@@ -99,6 +99,38 @@ function initFooter() {
     });
 }
 
+function initMobileMenu() {
+    $('#menu-footer-mobile-nav').click(function() {
+        $('#menu-modal').fadeOut(function() {
+            $('#footer-mobile-menu').fadeIn();
+        });
+    });
+
+    $('#about-footer-mobile-nav').click(function() {
+        $('#menu-modal').fadeOut(function() {
+            $('#footer-mobile-about').fadeIn();
+        });
+    });
+
+    $('#findus-footer-mobile-nav').click(function() {
+        $('#menu-modal').fadeOut(function() {
+            $('#footer-mobile-findus').fadeIn();
+        });
+    });
+
+    $('#partners-footer-mobile-nav').click(function() {
+        $('#menu-modal').fadeOut(function() {
+            $('#footer-mobile-partners').fadeIn();
+        });
+    });
+
+    $('#socialmedia-footer-mobile-nav').click(function() {
+        $('#menu-modal').fadeOut(function() {
+            $('#footer-mobile-socialmedia').fadeIn();
+        });
+    });
+}
+
 function initDownScroll() {
     $('#arrowdown').click(function(event) {
         event.preventDefault();
@@ -196,6 +228,7 @@ $(document).ready(function() {
     initBackButton();
 
     if ($(window).width() < 500) {
+        initMobileMenu();
         if ($('#home-hamburger').length) {
             initChangeHomeMenu();
         }
