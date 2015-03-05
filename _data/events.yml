@@ -4,6 +4,7 @@
   time: "1:00PM"
   date: "02 April"
   day: "Saturday"
+  category: "Music"
 
 - title: "The sotry of the cool people"
   author: "die Andrea"
@@ -11,6 +12,7 @@
   time: "8:00PM"
   date: "05 March"
   day: "Thursday"
+  category: "Film"
 
 - title: "Some facts aobut my home country"
   author: "Der Peter"
@@ -18,3 +20,4 @@
   time: "9:00AM"
   date: "01 February"
   day: "Monday"
+  category: "Music"

@@ -29,6 +29,24 @@
                     @include buttonstyle($learn, white);
                 }
             }
+
+            .triangle {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 80px 80px 0;
+                border-color: transparent $darkgray transparent transparent;
+                float: right;
+                text-align: right;
+
+                p {
+                    font-size: 20px;
+                    color: $learn;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                }
+            }
         }
     }
 }
