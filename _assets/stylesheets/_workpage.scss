@@ -42,3 +42,15 @@
     }
 
 }
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .workpage {
+        margin-top: $hamburger-size;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .workpage {
+        margin-top: 0;
+    }
+}
