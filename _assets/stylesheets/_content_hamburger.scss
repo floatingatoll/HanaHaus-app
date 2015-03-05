@@ -2,17 +2,25 @@
 	position: fixed;
 	width: 100%;
 	text-align: center;
-	font-size: 72px;
+	font-size: 56px;
 	line-height: 108px;
 	height: 108px;
 	background-color: $lightgray;
 	display: none;
 	z-index: 100;
 
-	#content-menu-icon {
-		padding-left: 40%;
+	#back-to-home-mobile {
 		float: left;
-		margin-left: 10px;
+	}
+
+	#icon-and-title {
+		left: 50%;
+	}
+
+	#content-menu-icon {
+		float: left;
+		height: 30px;
+		width: 30px;
 	}
 
 	#content-menu-title {
