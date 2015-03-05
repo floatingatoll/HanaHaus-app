@@ -139,8 +139,16 @@ function initChangeHomeMenu() {
 }
 
 // for mobile site content pages
-function hideWebHeader() {
-    
+function hideWebCategoryHeader() {
+    if ($('.category-header').length) {
+        $('.category-header').css('display', 'none');
+    }
+}
+
+function showWebCategoryHeader() {
+    if ($('.category-header').length) {
+        $('.category-header').css('display', 'block');
+    }
 }
 
 function initModalClick() {
@@ -197,6 +205,9 @@ $(document).ready(function() {
         if ($('#home-hamburger').length) {
             initChangeHomeMenu();
         }
+        else {
+            hideWebCategoryHeader();
+        }
     }
 });
 
@@ -206,7 +217,15 @@ $(window).resize(function() {
         if ($('#home-hamburger').length) {
             initChangeHomeMenu();
         }
+        else {
+            hideWebCategoryHeader();
+        }
     } else {
-        clearInterval(mobileInterval);
+        if ($('#home-hamburger').length) {
+            clearInterval(mobileInterval);
+        }
+        else {
+            showWebCategoryHeader();
+        }
     }
 })
