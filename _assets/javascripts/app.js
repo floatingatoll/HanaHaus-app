@@ -114,7 +114,7 @@ function initDownScroll() {
     });
 }
 
-// for mobile site
+// for mobile site home page
 function initChangeMenu() {
     mobileInterval = setInterval(function() {
         if (($('#menuThing').is(":visible")) && $(window).scrollTop() >= $('.intro-text').offset().top - 100) {
@@ -136,6 +136,11 @@ function initChangeMenu() {
         }
 
     }, 100);
+}
+
+// for mobile site content pages
+function hideWebHeader() {
+    
 }
 
 function initModalClick() {
