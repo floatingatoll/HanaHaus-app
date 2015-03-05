@@ -115,7 +115,7 @@ function initDownScroll() {
 }
 
 // for mobile site
-function initChangeMenu() {
+function initChangeHomeMenu() {
     mobileInterval = setInterval(function() {
         if (($('#menuThing').is(":visible")) && $(window).scrollTop() >= $('.intro-text').offset().top - 100) {
             $('#menuThing').fadeOut(200);
@@ -190,7 +190,7 @@ $(document).ready(function() {
 
     if ($(window).width() < 500) {
         if ($('#home-hamburger').length) {
-            initChangeMenu();
+            initChangeHomeMenu();
         }
     }
 });
@@ -199,7 +199,7 @@ $(document).ready(function() {
 $(window).resize(function() {
     if($(window).width() < 500) {
         if ($('#home-hamburger').length) {
-            initChangeMenu();
+            initChangeHomeMenu();
         }
     } else {
         clearInterval(mobileInterval);
