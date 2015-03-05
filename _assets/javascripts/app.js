@@ -189,14 +189,18 @@ $(document).ready(function() {
     initBackButton();
 
     if ($(window).width() < 500) {
-        initChangeMenu();
+        if ($('#home-hamburger').length) {
+            initChangeMenu();
+        }
     }
 });
 
 // WINDOW
 $(window).resize(function() {
     if($(window).width() < 500) {
-        initChangeMenu();
+        if ($('#home-hamburger').length) {
+            initChangeMenu();
+        }
     } else {
         clearInterval(mobileInterval);
     }
