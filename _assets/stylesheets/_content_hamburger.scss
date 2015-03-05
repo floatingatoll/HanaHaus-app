@@ -1,3 +1,11 @@
+#random-blank-div {
+	z-index: -1;
+	width: 100%;
+	height: 108px;
+	position: absolute;
+	display: none;
+}
+
 #content-hamburger {
 	position: fixed;
 	width: 100%;
@@ -38,10 +46,18 @@
 	#content-hamburger {
 		display: block;
 	}
+
+	#random-blank-div {
+		display: block;
+	}
 }
 
 @media screen and (min-width: 501px) {
 	#content-hamburger {
+		display: none;
+	}
+
+	#random-blank-div {
 		display: none;
 	}
 }

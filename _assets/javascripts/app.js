@@ -118,7 +118,7 @@ function initDownScroll() {
 function initChangeHomeMenu() {
     mobileInterval = setInterval(function() {
         if (($('#menuThing').is(":visible")) && $(window).scrollTop() >= $('.intro-text').offset().top - 100) {
-            $('#menuThing').fadeOut(200);
+            $('#menuThing').css('display', 'none');
         }
         if ((!$('#menuThing').is(":visible")) && $(window).scrollTop() < $('.intro-text').offset().top - 100) {
             $('#menuThing').fadeIn(200);
