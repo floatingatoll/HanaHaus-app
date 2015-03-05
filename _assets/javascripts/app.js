@@ -205,3 +205,23 @@ $(window).resize(function() {
         clearInterval(mobileInterval);
     }
 })
+
+var lastVal = 0;
+$(window).scroll(function() {
+    console.log('is this it');
+    if ($(window).scrollTop() < $('#work').offset().top - 1) {
+        var handler = function(e) {
+            console.log('scroll disalbed');
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        $('html, body').bind('mousewheel', handler).animate({
+            scrollTop: $('#work').offset().top
+        }, 500, 'swing',
+        function() {
+            $('html, body').unbind('mousewheel', handler);
+            console.log('why');
+        });
+    }
+});
+
