@@ -221,6 +221,17 @@ $(window).resize(function() {
             $('.category-header').css('display', 'none');
         }
     } else {
+        if ($('#menu-modal').is(':visible')) {
+            $('#menu-modal').fadeOut(200, function() {
+                $('#main-content').fadeIn(200, function() {
+                    // FIXME: find a way to return to previous scroll position
+                    // prior to opening the modal
+                    $('html, body').animate({
+                        scrollTop: currentScrollPosition
+                    }, 0);
+                });
+            });
+        }
         if ($('#home-hamburger').length) {
             clearInterval(mobileInterval);
             if (learnDivSwapped) {
