@@ -222,6 +222,7 @@
     // === footerarea
     .footer {
         background-color: $lightgray;
+        border-top: 1px solid $border-gray;
         padding-top: 25px;
 
         .footerlink {
