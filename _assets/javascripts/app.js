@@ -114,8 +114,8 @@ function initDownScroll() {
     });
 }
 
-// for mobile site home page
-function initChangeMenu() {
+// for mobile site
+function initChangeHomeMenu() {
     mobileInterval = setInterval(function() {
         if (($('#menuThing').is(":visible")) && $(window).scrollTop() >= $('.intro-text').offset().top - 100) {
             $('#menuThing').fadeOut(200);
@@ -194,14 +194,18 @@ $(document).ready(function() {
     initBackButton();
 
     if ($(window).width() < 500) {
-        initChangeMenu();
+        if ($('#home-hamburger').length) {
+            initChangeHomeMenu();
+        }
     }
 });
 
 // WINDOW
 $(window).resize(function() {
     if($(window).width() < 500) {
-        initChangeMenu();
+        if ($('#home-hamburger').length) {
+            initChangeHomeMenu();
+        }
     } else {
         clearInterval(mobileInterval);
     }
