@@ -7,7 +7,7 @@ description: > #
   share ideas and connect with experts.
 baseurl: "/HanaHaus-app" # the subpath of your site, e.g. /blog/
 url: "http://hanahaus.com" # the base hostname & protocol for your site
-twitter_username: HanaHausBayArea
+twitter_username: HanaHaus
 github_username:  HanaHaus
 
 # Build settings
